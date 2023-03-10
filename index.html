@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS ES6 Quiz-1</title>
+</head>
+<body>
+<script>
+
+// 1) Filter the students from the class 6th 'A' section from the below array of objects.
+
+console.log("Quiz-1");
+
+let myArr = [{
+    studenName: "jack",
+    studenClass: 6,
+    studenSection: "a"
+  },
+  {
+    studenName: "tom",
+    studenClass: 6,
+    studenSection: "a"
+  },
+  {
+    studenName: "ricky",
+    studenClass: 6,
+    studenSection: "b"
+  }, {
+    studenName: "john",
+    studenClass: 6,
+    studenSection: "b"
+  }, {
+    studenName: "jerry",
+    studenClass: 6,
+    studenSection: "a"
+  }, {
+    studenName: "henry",
+    studenClass: 6,
+    studenSection: "b"
+  }, {
+    studenName: "stephen",
+    studenClass: 6,
+    studenSection: "a"
+  }
+];
+
+let filteredArr = myArr.filter((stud) => stud.studenSection == 'a');
+console.log(filteredArr);
+
+// 2) Sort an array of JavaScript objects.
+
+console.log("Quiz-2");
+
+library = [ 
+   {
+       title:  'The Road Ahead',
+       author: 'Bill Gates',
+       libraryID: 1254
+   },
+   {
+       title: 'Walter Isaacson',
+       author: 'Steve Jobs',
+       libraryID: 4264
+   },
+   {
+       title: 'Mockingjay: The Final Book of The Hunger Games',
+       author: 'Suzanne Collins',
+       libraryID: 3245
+   },
+   {
+       title: 'Adventures of Tom Sawyer',
+       author: 'Mark Twain',
+       libraryID: 1345
+   },
+   {
+       title: 'Adventures of Sherlock Holmes',
+       author: 'Sir Arthur Conan Doyle',
+       libraryID: 2245
+   }
+];
+
+library.sort((a, b) => a.libraryID - b.libraryID);
+
+console.log(library);
+
+// 3) Identify all of the variables, object property names, primitive values, and objects shown in the following code
+
+console.log("Quiz-3");
+
+function hello(greeting, name) {
+  return greeting + ' ' + name;
+}
+
+function xyzzy() {
+  return { a: 1, b: 2, c: [3, 4, 5], d: {} };
+}
+
+const howdy = hello('Hi', 'Grace');
+let foo = xyzzy();
+
+console.log(howdy,foo);
+
+console.log("Variables: greeting, name, howdy, foo");
+console.log("Object property names: a, b, c, d");
+console.log("Primitive values: ‘Hi’, ‘Grace’, 1, 2, 3, 4 ,5");
+console.log("Objects: { a: 1, b: 2 , c: [3 ,4 ,5], d: {} }, [3 ,4 ,5], {}");
+
+// Variables: greeting, name, howdy, foo
+// Object property names: a, b, c, d
+// Primitive values: ‘Hi’, ‘Grace’, 1, 2, 3, 4 ,5
+// Objects: { a: 1, b: 2 , c: [3 ,4 ,5], d: {} }, [3 ,4 ,5], {}
+
+// 4) Write a code to replace the value 6 in the following object with 606
+
+console.log("Quiz-4");
+
+let obj = {
+  foo: { a: "hello", b: "world" },
+  bar: ["example", "mem", null, { xyz: 6 }, 88],
+  qux: [4, 8, 12]
+};
+
+obj.bar[3].xyz = 606; // dot notation
+console.log(obj);
+
+// obj["bar"][3]["xyz"] = 606; // bracket notation
+
+</script>
+</body>
+</html>
